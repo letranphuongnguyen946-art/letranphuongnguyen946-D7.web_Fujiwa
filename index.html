@@ -3,162 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fujiwa Vietnam - Đại Lý Phân Phối Nước Ion Kiềm D7</title>
+    <title>Fujiwa Việt Nam - Nước Uống Ion Kiềm Nhật Bản</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-        .contact-info { background: #004085; color: white; padding: 10px; text-align: center; font-size: 14px; }
-        header { background: #0056b3; color: white; padding: 20px; text-align: center; }
-        
-        /* Giao diện thanh Menu điều hướng */
-        nav { background: #333; text-align: center; padding: 12px; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 16px; }
-        nav a:hover { color: #ffc107; }
-        
-        .container { max-width: 1200px; margin: 20px auto; padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-        .product-card { background: white; border: 1px solid #ddd; border-radius: 8px; width: 280px; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .product-card img { width: 100%; height: 200px; object-fit: contain; }
-        .old-price { color: #888; text-decoration: line-through; font-size: 14px; margin-top: 10px; }
-        .price { color: red; font-weight: bold; font-size: 20px; margin: 5px 0 15px 0; }
-        .btn-buy { background: #ffc107; color: black; border: none; padding: 10px 20px; font-weight: bold; cursor: pointer; border-radius: 5px; text-decoration: none; display: inline-block; }
-        .btn-buy:hover { background: #e0a800; }
-        .banner { background: #e9ecef; padding: 30px; text-align: center; margin-bottom: 20px; }
-        footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 50px; font-size: 14px; }
+        :root { --blue: #0066cc; --white: #ffffff; --gray: #f4f4f4; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: var(--gray); color: #333; }
+        header { background: var(--blue); color: var(--white); padding: 15px; text-align: center; }
+        header p { margin: 5px 0 0; font-size: 1.1em; }
+        nav { background: #333; padding: 10px; text-align: center; sticky-top: 0; position: sticky; top: 0; z-index: 999; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { color: #cbdfff; }
+        .container { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
+        .banner { background: #e2f0fd; padding: 30px; text-align: center; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid var(--blue); }
+        .section-title { text-align: center; color: var(--blue); margin-bottom: 30px; text-transform: uppercase; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin-bottom: 5px; }
+        .product-card { background: var(--white); padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s; display: flex; flex-direction: column; justify-content: space-between; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-card img { max-width: 100%; height: 180px; object-fit: contain; margin-bottom: 15px; }
+        .product-card h3 { font-size: 1rem; margin: 10px 0; height: 40px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+        .price-box { margin: 10px 0; }
+        .price-old { text-decoration: line-through; color: #888; font-size: 0.9em; margin-right: 8px; }
+        .price-new { color: #e43a3a; font-weight: bold; font-size: 1.1em; }
+        .btn-buy { background: var(--blue); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; transition: background 0.2s; }
+        .btn-buy:hover { background: #004da6; }
+        footer { background: #222; color: #ccc; text-align: center; padding: 30px 20px; margin-top: 60px; font-size: 0.9em; }
+        footer p { margin: 5px 0; }
+        .hotline-fixed { position: fixed; bottom: 20px; right: 20px; background: #e43a3a; color: white; padding: 12px 25px; border-radius: 30px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; gap: 8px; }
+        .hotline-fixed:hover { background: #cc2a2a; }
     </style>
 </head>
 <body>
 
-    <!-- Thông tin liên hệ bắt buộc -->
-    <div class="contact-info">
-        📞 Hotline: <strong>1900 8462</strong> | ✉️ Email: <strong>D7@fujiwavietnam.vn</strong>
-    </div>
-
     <header>
-        <h1>FUJIWA VIETNAM - ĐẠI LÝ CHÍNH HÃNG</h1>
-        <p>Giữ trọn tinh hoa Nhật Bản cho sức khỏe vàng</p>
+        <h1>FUJIWA VIỆT NAM</h1>
+        <p>Hotline hỗ trợ: <strong>1900 8462</strong> | Email: <strong><D7>@fujiwavietnam.vn</strong></p>
     </header>
 
-    <!-- Thanh Menu điều hướng hệ thống 4 trang con -->
     <nav>
-        <a href="/letranphuongnguyen946-D7.web_Fujiwa/index.html">Trang Chủ</a>
-        <a href="/letranphuongnguyen946-D7.web_Fujiwa/products.html">Sản Phẩm (10)</a>
-        <a href="/letranphuongnguyen946-D7.web_Fujiwa/about.html">Giới Thiệu</a>
-        <a href="/letranphuongnguyen946-D7.web_Fujiwa/news.html">Tin Tức</a>
+        <a href="index.html">Trang Chủ / Sản Phẩm</a>
+        <a href="gioi-thieu.html">Giới Thiệu</a>
+        <a href="tin-tuc.html">Tin Tức Sức Khỏe</a>
+        <a href="lien-he.html">Liên Hệ</a>
     </nav>
 
-    <div class="banner">
-        <h2>Siêu Thị Nước Ion Kiềm Cao Cấp Fujiwa</h2>
-        <p>Ưu đãi chiết khấu đặc biệt lên đến 5% cho tất cả các dòng sản phẩm chính hãng dưới đây.</p>
-    </div>
-
-    <!-- KHU VỰC HIỂN THỊ ĐỦ TRỌN BỘ 10 SẢN PHẨM FUJIWA -->
     <div class="container">
+        <div class="banner">
+            <h2>NƯỚC UỐNG ION KIỀM CHUẨN CÔNG NGHỆ NHẬT BẢN</h2>
+            <p>Sức khỏe tốt bắt đầu từ nguồn nước tốt. Đặt hàng ngay hôm nay nhận ưu đãi giảm giá 5%!</p>
+        </div>
+
+        <h2 class="section-title">Danh Sách Sản Phẩm Chính Hãng</h2>
         
-        <!-- Sản phẩm 1 -->
-        <div class="product-card">
-            <img src="https://i.postimg.cc/kX87p0Xq/thung-350ml.png" alt="Fujiwa 350ml">
-            <h3>Nước Ion Kiềm Fujiwa 350ml</h3>
-            <p>Quy cách: Thùng 24 chai</p>
-            <div class="old-price">Giá gốc: 156.000 đ</div>
-            <div class="price">148.200 đ <span style="font-size: 12px; color: green;">(-5%)</span></div>
-            <a href="/letranphuongnguyen946-D7.web_Fujiwa/order.html?product=Fujiwa-350ml" class="btn-buy">Đặt mua ngay</a>
-        </div>
+        <div class="product-grid">
+            
+            <!-- Sản phẩm 1 -->
+            <div class="product-card">
+                <img src="https://fujiwavietnam.vn/wp-content/uploads/2025/11/1b69b29d142f44649c7dd2f18b5e8695tplv-aphluv4xwc-origin-jpeg.jpeg" alt="Nước Ion Kiềm Fujiwa 300ml">
+                <h3>Thùng Nước Uống Ion Kiềm Fujiwa 300ml (24 chai)</h3>
+                <div class="price-box">
+                    <span class="price-old">180.000đ</span>
+                    <span class="price-new">171.200đ</span>
+                </div>
+                <button class="btn-buy" onclick="alert('Vui lòng gọi Hotline 1900 8462 để đặt giao hàng tận nơi!')">Mua ngay</button>
+            </div>
 
-        <!-- Sản phẩm 2 -->
-        <div class="product-card">
-            <img src="https://i.postimg.cc/W36wX6p2/thung-450ml.png" alt="Fujiwa 450ml">
-            <h3>Nước Ion Kiềm Fujiwa 450ml</h3>
-            <p>Quy cách: Thùng 24 chai</p>
-            <div class="old-price">Giá gốc: 168.000 đ</div>
-            <div class="price">159.600 đ <span style="font-size: 12px; color: green;">(-5%)</span></div>
-            <a href="/letranphuongnguyen946-D7.web_Fujiwa/order.html?product=Fujiwa-450ml" class="btn-buy">Đặt mua ngay</a>
-        </div>
+            <!-- Sản phẩm 2 -->
+            <div class="product-card">
+                <img src="https://fujiwavietnam.vn/wp-content/uploads/2025/11/70c171289e8e4eb7b2d45e8d844da104tplv-aphluv4xwc-origin-jpeg.jpeg" alt="Nước Ion Kiềm Fujiwa 450ml">
+                <h3>Thùng Nước Uống Ion Kiềm Fujiwa 450ml (24 chai)</h3>
+                <div class="price-box">
+                    <span class="price-old">240.000đ</span>
+                    <span class="price-new">228.000đ</span>
+                </div>
+                <button class="btn-buy" onclick="alert('Vui lòng gọi Hotline 1900 8462 để đặt giao hàng tận nơi!')">Mua ngay</button>
+            </div>
 
-        <!-- Sản phẩm 3 -->
-        <div class="product-card">
-            <img src="https://i.postimg.cc/XvSkY7p5/thung-680ml.png" alt="Fujiwa 680ml">
-            <h3>Nước Ion Kiềm Fujiwa 680ml</h3>
-            <p>Quy cách: Thùng 20 chai</p>
-            <div class="old-price">Giá gốc: 180.000 đ</div>
-            <div class="price">171.000 đ <span style="font-size: 12px; color: green;">(-5%)</span></div>
-            <a href="/letranphuongnguyen946-D7.web_Fujiwa/order.html?product=Fujiwa-680ml" class="btn-buy">Đặt mua ngay</a>
-        </div>
+            <!-- Sản phẩm 3 -->
+            <div class="product-card">
+                <img src="https://fujiwavietnam.vn/wp-content/uploads/2025/11/dc722d15de28436bb30985a1234d0c2etplv-aphluv4xwc-origin-jpeg.jpeg" alt="Nước Ion Kiềm Fujiwa 680ml">
+                <h3>Thùng Nước Uống Ion Kiềm Fujiwa 680ml (20 chai)</h3>
+                <div class="price-box">
+                    <span class="price-old">240.000đ</span>
+                    <span class="price-new">228.000đ</span>
+                </div>
+                <button class="btn-buy" onclick="alert('Vui lòng gọi Hotline 1900 8462 để đặt giao hàng tận nơi!')">Mua ngay</button>
+            </div>
 
-        <!-- Sản phẩm 4 -->
-        <div class="product-card">
-            <img src="https://i.postimg.cc/C1bCcrn4/thung-1250ml.png" alt="Fujiwa 1.25L">
-            <h3>Nước Ion Kiềm Fujiwa 1250ml</h3>
-            <p>Quy cách: Thùng 12 chai</p>
-            <div class="old-price">Giá gốc: 165.000 đ</div>
-            <div class="price">156.750 đ <span style="font-size: 12px; color: green;">(-5%)</span></div>
-            <a href="/letranphuongnguyen946-D7.web_Fujiwa/order.html?product=Fujiwa-1250ml" class="btn-buy">Đặt mua ngay</a>
-        </div>
+            <!-- Sản phẩm 4 -->
+            <div class="product-card">
+                <img src="https://fujiwavietnam.vn/wp-content/uploads/2025/11/c618418b2dff4cbc9350db95bd90714dtplv-aphluv4xwc-origin-jpeg.jpeg" alt="Nước Ion Kiềm Fujiwa 1250ml">
+                <h3>Thùng Nước Uống Ion Kiềm Fujiwa 1250ml (12 chai)</h3>
+                <div class="price-box">
+                    <span class="price-old">215.000đ</span>
+                    <span class="price-new">204.250đ</span>
+                </div>
+                <button class="btn-buy" onclick="alert('Vui lòng gọi Hotline 1900 8462 để đặt giao hàng tận nơi!')">Mua ngay</button>
+            </div>
 
-        <!-- Sản phẩm 5 -->
-        <div class="product-card">
-            <img src="https://i.postimg.cc/mD8zQWvV/binh-19l.png" alt="Fujiwa Bình Vòi 19L">
-            <h3>Nước Ion Kiềm Fujiwa Bình Vòi 19L</h3>
-            <p>Quy cách: Bình 19L có vòi</p>
-            <div class="old-price">Giá gốc: 65.000 đ</div>
-            <div class="price">61.750 đ <span style="font-size: 12px; color: green;">(-5%)</span></div>
-            <a href="/letranphuongnguyen946-D7.web_Fujiwa/order.html?product=Fujiwa-Binh-Voi-19L" class="btn-buy">Đặt mua ngay</a>
-        </div>
+            <!-- Sản phẩm 5 -->
+            <div class="product-card">
+                <img src="https://fujiwavietnam.vn/wp-content/uploads/2025/11/z4571366108846-18ae1b425618297f4b822b081d6f12dd-2048x2048.jpg" alt="Bình Nước Ion Kiềm Fujiwa 18L">
+                <h3>Bình Nước Uống Ion Kiềm Fujiwa 18L (Có vòi)</h3>
+                <div class="price-box">
+                    <span class="price-old">105.000đ</span>
+                    <span class="price-new">99.750đ</span>
+                </div>
+                <button class="btn-buy" onclick="alert('Vui lòng gọi Hotline 1900 8462 để đặt giao hàng tận nơi!')">Mua ngay</button>
+            </div>
 
-        <!-- Sản phẩm 6 -->
-        <div class="product-card">
-            <img src="https://i.postimg.cc/mD8zQWvV/binh-19l.png" alt="Fujiwa Bình Úp 19L">
-            <h3>Nước Ion Kiềm Fujiwa Bình Úp 19L</h3>
-            <p>Quy cách: Bình 19L cây nước nóng lạnh</p>
-            <div class="old-price">Giá gốc: 65.000 đ</div>
-            <div class="price">61.750 đ <span style="font-size: 12px; color: green;">(-5%)</span></div>
-            <a href="/letranphuongnguyen946-D7.web_Fujiwa/order.html?product=Fujiwa-Binh-Up-19L" class="btn-buy">Đặt mua ngay</a>
-        </div>
+            <!-- Sản phẩm 6 -->
+            <div class="product-card">
+                <img src="https://fujiwavietnam.vn/wp-content/uploads/2025/11/frame-nuoc-uong-tinh-khiet-fujiwa-19l-1705553103093.jpg" alt="Bình Nước Uong Tinh Khiet Fujiwa 19L">
+                <h3>Bình Nước Uong Tinh Khiet Fujiwa 19L </h3>
+                <div class="price-box">
+                    <span class="price-old">75.000đ</span>
+                    <span class="price-new">71.250đ</span>
+                </div>
+                <button class="btn-buy" onclick="alert('Vui lòng gọi Hotline 1900 8462 để đặt giao hàng tận nơi!')">Mua ngay</button>
+            </div>
 
-        <!-- Sản phẩm 7 -->
-        <div class="product-card">
-            <img src="https://i.postimg.cc/d16ZkZkC/thung-gai-60ml.png" alt="Xịt khoáng Fujiwa">
-            <h3>Xịt Khoáng Ion Cao Cấp Fujiwa</h3>
-            <p>Quy cách: Chai bỏ túi 60ml</p>
-            <div class="old-price">Giá gốc: 45.000 đ</div>
-            <div class="price">42.750 đ <span style="font-size: 12px; color: green;">(-5%)</span></div>
-            <a href="/letranphuongnguyen946-D7.web_Fujiwa/order.html?product=Xit-Khoang-Fujiwa" class="btn-buy">Đặt mua ngay</a>
-        </div>
+            <!-- Sản phẩm 7 -->
+            <div class="product-card">
+                <img src="https://fujiwavietnam.vn/wp-content/uploads/2025/11/Artboard-5.png" alt="Nước súc miệng Ion Muối">
+                <h3>Thùng Nước Súc Miệng Ion Muối Fujiwa 680ml (20 chai)</h3>
+                <div class="price-box">
+                    <span class="price-old">360.000đ</span>
+                    <span class="price-new">342.000đ</span>
+                </div>
+                <button class="btn-buy" onclick="alert('Vui lòng gọi Hotline 1900 8462 để đặt giao hàng tận nơi!')">Mua ngay</button>
+            </div>
 
-        <!-- Sản phẩm 8 -->
-        <div class="product-card">
-            <img src="https://i.postimg.cc/vH2s4L5Q/khan-uot.png" alt="Khăn ướt Fujiwa">
-            <h3>Khăn Ướt Kháng Khuẩn Fujiwa</h3>
-            <p>Quy cách: Gói lớn 80 tờ</p>
-            <div class="old-price">Giá gốc: 32.000 đ</div>
-            <div class="price">30.400 đ <span style="font-size: 12px; color: green;">(-5%)</span></div>
-            <a href="/letranphuongnguyen946-D7.web_Fujiwa/order.html?product=Khan-Uot-Fujiwa" class="btn-buy">Đặt mua ngay</a>
-        </div>
+            <!-- Sản phẩm 8 -->
+            <div class="product-card">
+                <img src="https://fujiwavietnam.vn/wp-content/uploads/2025/11/Artboard-4.png" alt="Nước súc miệng Ion Fujisalt">
+                <h3>Thùng Nước Súc Miệng Ion Fujisalt (20 chai)</h3>
+                <div class="price-box">
+                    <span class="price-old">360.000đ</span>
+                    <span class="price-new">342.000đ</span>
+                </div>
+                <button class="btn-buy" onclick="alert('Vui lòng gọi Hotline 1900 8462 để đặt giao hàng tận nơi!')">Mua ngay</button>
+            </div>
 
-        <!-- Sản phẩm 9 -->
-        <div class="product-card">
-            <img src="https://i.postimg.cc/9F7fC8Nf/nuoc-suc-mieng.png" alt="Nước súc miệng Fujiwa">
-            <h3>Nước Súc Miệng Ion Muối Fujiwa</h3>
-            <p>Quy cách: Chai chuyên dụng 500ml</p>
-            <div class="old-price">Giá gốc: 28.000 đ</div>
-            <div class="price">26.600 đ <span style="font-size: 12px; color: green;">(-5%)</span></div>
-            <a href="/letranphuongnguyen946-D7.web_Fujiwa/order.html?product=Nuoc-Suc-Mieng-Fujiwa" class="btn-buy">Đặt mua ngay</a>
-        </div>
+            <!-- Sản phẩm 9 -->
+            <div class="product-card">
+                <img src="https://fujiwavietnam.vn/wp-content/uploads/2025/11/5aa61c203bb1493dbbd39cf22f9dc710tplv-o3syd03w52-origin-jpeg.jpeg" alt="Xịt mũi Ion Fujisalt">
+                <h3>Dung Dịch Vệ Sinh Mũi Ion Fujisalt (Chai 70ml)</h3>
+                <div class="price-box">
+                    <span class="price-old">55.000đ</span>
+                    <span class="price-new">52.250đ</span>
+                </div>
+                <button class="btn-buy" onclick="alert('Vui lòng gọi Hotline 1900 8462 để đặt giao hàng tận nơi!')">Mua ngay</button>
+            </div>
 
-        <!-- Sản phẩm 10 -->
-        <div class="product-card">
-            <img src="https://i.postimg.cc/NjS4qfym/tui-uong-hydrogen.png" alt="Túi nước giàu Hydrogen">
-            <h3>Nước Giàu Hydrogen Fujiwa (Túi)</h3>
-            <p>Quy cách: Thùng 10 túi cao cấp</p>
-            <div class="old-price">Giá gốc: 250.000 đ</div>
-            <div class="price">237.500 đ <span style="font-size: 12px; color: green;">(-5%)</span></div>
-            <a href="/letranphuongnguyen946-D7.web_Fujiwa/order.html?product=Tui-Hydrogen-Fujiwa" class="btn-buy">Đặt mua ngay</a>
-        </div>
+            <!-- Sản phẩm 10 -->
+            <div class="product-card">
+                <img src="https://fujiwavietnam.vn/wp-content/uploads/2025/11/55747dc153e5460095f3be4041475363tplv-aphluv4xwc-origin-jpeg-2048x2048.jpeg" alt= "Nước Uống Đẹp Da Fujiwa Collagen">
+                <h3>Nước Uống Đẹp Da Fujiwa Collagen (10 chai)</h3>
+                <div class="price-box">
+                    <span class="price-old">900.000đ</span>
+                    <span class="price-new">855.000đ</span>
+                </div>
+                <button class="btn-buy" onclick="alert('Vui lòng gọi Hotline 1900 8462 để đặt giao hàng tận nơi!')">Mua ngay</button>
+            </div>
 
+        </div>
     </div>
+
+    <!-- Nút Hotline cố định góc màn hình -->
+    <a href="tel:19008462" class="hotline-fixed">📞 GỌI NGAY: 1900 8462</a>
 
     <footer>
-        <p><strong>Thông tin liên hệ đại lý Fujiwa - Đội D7</strong></p>
-        <p>Hotline: 1900 8462 | Email: D7@fujiwavietnam.vn</p>
-        <p style="font-size: 12px; color: #aaa;">Mọi bài viết và dữ liệu hình ảnh tổng hợp trên website này đều được trích nguồn rõ ràng từ Fujiwa Vietnam.</p>
+        <p><strong>ĐẠI LÝ PHÂN PHỐI ỦY QUYỀN FUJIWA VIỆT NAM</strong></p>
+        <p>Hotline đặt hàng nhanh: 1900 8462 | Email hỗ trợ: <D7>@fujiwavietnam.vn</p>
+        <p style="color: #666; margin-top: 15px;">Website được xây dựng dựa trên danh mục sản phẩm chính thức của Fujiwa Việt Nam.</p>
     </footer>
 
 </body>
