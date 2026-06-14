@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Xác Nhận Đặt Hàng - Fujiwa</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 5px; }
+        .form-box { max-width: 500px; margin: 50px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        input, select { width: 100%; padding: 10px; margin: 10px 0; box-sizing: border-box; }
+        button { background: #0056b3; color: white; border: none; padding: 12px; width: 100%; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="form-box">
+    <h2>Thông Tin Đặt Hàng</h2>
+    <!-- Hệ thống nhận đơn qua email miễn phí Formspree -->
+    <form action="https://formspree.io/f/xoqzpvpe" method="POST">
+        <label>Sản phẩm đã chọn:</label>
+        <input type="text" name="San_Pham" id="product-name" readonly>
+
+        <label>Họ và tên khách hàng:</label>
+        <input type="text" name="Ten_Khach_Hang" required>
+
+        <label>Số điện thoại nhận nước:</label>
+        <input type="tel" name="So_Dien_Thoai" required>
+
+        <label>Địa chỉ giao hàng:</label>
+        <input type="text" name="Dia_Chi" required>
+
+        <label>Số lượng thùng/bình:</label>
+        <input type="number" name="So_Luong" value="1" min="1">
+
+        <button type="submit">Xác Nhận Đặt Hàng qua Email</button>
+    </form>
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById('product-name').value = urlParams.get('product') || 'Chưa chọn sản phẩm';
+</script>
+
+</body>
+</html>
